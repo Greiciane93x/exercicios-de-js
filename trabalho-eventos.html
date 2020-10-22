@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalhos de Eventos Js</title>
+    
+    <style type="text/css"> 
+        #eventos{
+            
+            font: normal 20pt garamond; 
+            margin-left:900px;
+            margin-bottom: 260px;
+            border: solid 2px;
+            border-radius:10px;
+            text-align: center;
+            background-color: aliceblue;
+            width: 200px; 
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+            
+            
+        }
+        
+        body{
+            background-image: url('https://vipzinho.com.br/wp-content/uploads/2020/04/magali-turmadamonica.jpg');
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            
+        }
+        
+    </style> 
+</head>
+    
+    <body>        
+        <script> 
+            
+            
+            var div1 = document.createElement("div"); 
+            div1.textContent = "ALICE";
+            div1.setAttribute("id", "eventos")
+            document.body.appendChild(div1); 
+            
+            
+            var div2 = document.querySelector("div#eventos");
+            div2.addEventListener("click", clicarTxt)
+            div2.addEventListener("mouseenter", entraDiv)
+            div2.addEventListener('mouseout', saiDiv)
+            
+            function clicarTxt(){
+                div2.textContent = "(ALICE)";
+            }
+            function entraDiv(){
+                div2.textContent = "!ALICE!";
+            }
+            function saiDiv(){
+                div2.textContent = 'ALICE'
+                
+            }
+
+                        
+        </script>         
+     </body>
+ </html>
